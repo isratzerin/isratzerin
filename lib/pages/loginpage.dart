@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog2/pages/routes.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -47,10 +48,17 @@ class LoginPage extends StatelessWidget {
               ],
             ),
           ),
+          const Text("Forgot Password?"),
           const SizedBox(
             height: 20,
           ),
-          const Text("Forgot Password?"),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, MyRoutes.homeRoute);
+            },
+            child: const Text("login"),
+            style: TextButton.styleFrom(minimumSize: const Size(120, 40)),
+          ),
         ],
       ),
     );
